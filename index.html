@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Here — ศูนย์ข้อมูลข้อตกลงและนโยบายการให้บริการ (Legal & Privacy Information)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0066B3;
+            --primary-dark: #004d88;
+            --primary-light: #EBF4FC;
+            --text-main: #1E293B;
+            --text-muted: #475569;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border-color: #E2E8F0;
+            --radius-card: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', 'Inter', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0066B3 0%, #004D88 100%);
+            color: white;
+            padding: 56px 24px 44px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 102, 179, 0.12);
+        }
+
+        .header-container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .app-icon {
+            width: 72px;
+            height: 72px;
+            background: white;
+            color: var(--primary);
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            margin-bottom: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.3px;
+        }
+
+        p.subtitle {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.88);
+            margin-bottom: 10px;
+        }
+
+        .badge-arch {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 4px 14px;
+            border-radius: 999px;
+            font-size: 12.5px;
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 840px;
+            width: 100%;
+            margin: -28px auto 50px;
+            padding: 0 20px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .portal-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 34px 30px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 102, 179, 0.1);
+            border-color: #BFDBFE;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .card-title {
+            font-size: 19px;
+            font-weight: 600;
+            color: #0F172A;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            line-height: 1.65;
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+
+        .card-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14.5px;
+        }
+
+        .support-box {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 26px 30px;
+            margin-top: 24px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .support-info h3 {
+            font-size: 16.5px;
+            font-weight: 600;
+            color: #0F172A;
+            margin-bottom: 4px;
+        }
+
+        .support-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .btn-support {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background 0.2s ease;
+        }
+
+        .btn-support:hover {
+            background: var(--primary-dark);
+        }
+
+        footer {
+            text-align: center;
+            padding: 28px 20px;
+            color: var(--text-muted);
+            font-size: 13.5px;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-card);
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 40px 16px 36px;
+            }
+            h1 {
+                font-size: 25px;
+            }
+            .portal-card {
+                padding: 26px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="app-icon">📍</div>
+            <h1>Know Here Mobile</h1>
+            <p class="subtitle">ศูนย์ข้อมูลข้อตกลงและนโยบายการให้บริการ (Legal & Privacy Information)</p>
+            <div class="badge-arch">สถาปัตยกรรมแบบไม่ระบุตัวตน (Anonymous Service Architecture)</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="cards-grid">
+            <a href="privacy_policy.html" class="portal-card">
+                <div>
+                    <div class="card-icon">🔒</div>
+                    <div class="card-title">นโยบายความเป็นส่วนตัว (Privacy Policy)</div>
+                    <div class="card-desc">
+                        ชี้แจงแนวปฏิบัติในการประมวลผลข้อมูลตามหลัก Privacy by Design การประมวลผลตำแหน่งพิกัดเฉพาะขณะใช้งาน การไม่จัดเก็บข้อมูลระบุตัวตนโดยตรง และการคุ้มครองสิทธิความเป็นส่วนตัวตามมาตรฐานสากล
+                    </div>
+                </div>
+                <div class="card-action">อ่านนโยบายความเป็นส่วนตัว →</div>
+            </a>
+
+            <a href="terms_of_service.html" class="portal-card">
+                <div>
+                    <div class="card-icon">📜</div>
+                    <div class="card-title">เงื่อนไขการใช้บริการ (Terms of Service)</div>
+                    <div class="card-desc">
+                        ข้อตกลงการเข้าใช้บริการ มาตรฐานความประพฤติและข้อห้ามเกี่ยวกับเนื้อหาที่ไม่เหมาะสม (Objectionable Content) กลไกการรายงานและตรวจสอบเนื้อหา และข้อปฏิเสธการรับประกัน
+                    </div>
+                </div>
+                <div class="card-action">อ่านเงื่อนไขการใช้บริการ →</div>
+            </a>
+
+            <a href="support.html" class="portal-card">
+                <div>
+                    <div class="card-icon">🎧</div>
+                    <div class="card-title">ศูนย์ช่วยเหลือและสนับสนุน (Support Center)</div>
+                    <div class="card-desc">
+                        แบบฟอร์มติดต่อฝ่ายสนับสนุน แจ้งปัญหาการใช้งาน สอบถามข้อมูลทางเทคนิค หรือส่งข้อเสนอแนะเพื่อร่วมพัฒนาแอปพลิเคชัน พร้อมการดูแลอย่างใกล้ชิด
+                    </div>
+                </div>
+                <div class="card-action">ติดต่อฝ่ายสนับสนุน →</div>
+            </a>
+        </div>
+
+        <div class="support-box">
+            <div class="support-info">
+                <h3>ติดต่อฝ่ายสนับสนุนและพัฒนา</h3>
+                <p>สอบถามข้อมูลทางกฎหมาย รายงานปัญหาการใช้งาน หรือส่งข้อเสนอแนะเกี่ยวกับแอปพลิเคชัน</p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="support.html" class="btn-support">แบบฟอร์มติดต่อ Support</a>
+                <a href="mailto:support@pksoft.dev" class="btn-support" style="background: #475569;">support@pksoft.dev</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 PKSoft. All rights reserved. Know Here Mobile Application.</p>
+    </footer>
+
+</body>
+</html>
