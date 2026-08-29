@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เงื่อนไขและข้อกำหนดการให้บริการ (Terms of Service) — Know Here</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0066B3;
+            --primary-dark: #004d88;
+            --primary-light: #EBF4FC;
+            --text-main: #1E293B;
+            --text-muted: #475569;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border-color: #E2E8F0;
+            --alert-border: #FCA5A5;
+            --alert-bg: #FEF2F2;
+            --alert-text: #991B1B;
+            --radius-card: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.75;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0066B3 0%, #004D88 100%);
+            color: white;
+            padding: 48px 24px 36px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 102, 179, 0.12);
+        }
+
+        .header-content {
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        .badge-app {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 5px 14px;
+            border-radius: 999px;
+            font-size: 13.5px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .effective-date {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        main {
+            max-width: 860px;
+            margin: -24px auto 60px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        .intro {
+            font-size: 15.5px;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: justify;
+        }
+
+        h2 {
+            font-size: 19px;
+            font-weight: 600;
+            color: #0F172A;
+            margin: 32px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 8px;
+            font-size: 14.5px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: var(--text-main);
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 18px;
+            color: var(--text-main);
+            font-size: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .alert-box {
+            background-color: var(--alert-bg);
+            border: 1px solid var(--alert-border);
+            border-left: 4px solid #DC2626;
+            padding: 18px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+
+        .alert-box h3 {
+            font-size: 15.5px;
+            color: var(--alert-text);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .alert-box p {
+            margin-bottom: 0;
+            color: #7F1D1D;
+            font-size: 14px;
+        }
+
+        .info-box {
+            background-color: var(--primary-light);
+            border: 1px solid #BFDBFE;
+            border-left: 4px solid var(--primary);
+            padding: 18px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+            color: #1E3A5F;
+            font-size: 14.5px;
+        }
+
+        .contact-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 8px;
+            font-size: 14.5px;
+            color: #334155;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-muted);
+            font-size: 13.5px;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-card);
+        }
+
+        .nav-links {
+            margin-bottom: 10px;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 36px 16px 28px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .card {
+                padding: 24px 18px;
+            }
+            h2 {
+                font-size: 17.5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="badge-app">แอปพลิเคชัน Know Here</div>
+            <h1>เงื่อนไขและข้อกำหนดการให้บริการ (Terms of Service)</h1>
+            <div class="effective-date">มีผลบังคับใช้ตั้งแต่วันที่ 25 สิงหาคม 2026 เป็นต้นไป</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="intro">
+                เอกสารฉบับนี้เป็นข้อตกลงและเงื่อนไขการใช้บริการ (“ข้อกำหนด”) ระหว่างผู้ให้บริการแอปพลิเคชัน <strong>Know Here</strong> (“ผู้ให้บริการ”) กับบุคคลผู้เข้าถึง ดาวน์โหลด ติดตั้ง หรือใช้งานแอปพลิเคชัน (“ผู้ใช้บริการ”) การเข้าถึงหรือใช้งานแอปพลิเคชันนี้ถือว่าผู้ใช้บริการได้รับทราบ เข้าใจ และตกลงที่จะผูกพันตนตามข้อกำหนดและเงื่อนไขที่ระบุไว้ในเอกสารฉบับนี้ทุกประการ
+            </div>
+
+            <h2><span class="section-icon">1</span> การยอมรับข้อกำหนด (Acceptance of Terms)</h2>
+            <p>หากผู้ใช้บริการไม่ยอมรับข้อกำหนดและเงื่อนไขฉบับนี้ ไม่ว่าทั้งหมดหรือบางส่วน ขอความกรุณายุติการใช้งานและดำเนินการถอนการติดตั้งแอปพลิเคชันออกจากอุปกรณ์ของท่าน ทั้งนี้ ผู้ให้บริการขอสงวนสิทธิ์ในการแก้ไข เพิ่มเติม หรือเปลี่ยนแปลงข้อกำหนดนี้ตามความเหมาะสม โดยจะมีผลบังคับใช้ทันทีเมื่อเผยแพร่ผ่านช่องทางของแอปพลิเคชัน</p>
+
+            <h2><span class="section-icon">2</span> ขอบเขตการให้บริการ (Scope of Service)</h2>
+            <p>แอปพลิเคชัน Know Here เป็นแพลตฟอร์มสำหรับการค้นหาสารสนเทศสถานที่ และช่องทางสื่อสารสำหรับชุมชน ซึ่งประกอบด้วยบริการดังต่อไปนี้:</p>
+            <ul>
+                <li><strong>ระบบแผนที่และสารสนเทศสถานที่:</strong> การค้นหาและแสดงรายละเอียดของสถานที่ พิกัดทางภูมิศาสตร์ เวลาทำการ และข้อมูลการติดต่อ</li>
+                <li><strong>ระบบรายงานสถานะความหนาแน่นของผู้ใช้บริการ:</strong> การรวบรวมและแสดงผลระดับความหนาแน่นของสถานที่จากข้อมูลการมีส่วนร่วมของผู้ใช้บริการ (Crowdsourced Data)</li>
+                <li><strong>ระบบสื่อสารสาธารณะประจำสถานที่:</strong> ช่องทางการแลกเปลี่ยนข้อมูล ข่าวสาร และการสอบถามข้อมูลระหว่างผู้ใช้บริการในพื้นที่</li>
+            </ul>
+
+            <h2><span class="section-icon">3</span> การเข้าใช้งานแบบไม่ระบุตัวตน (Anonymous Access & User Identity)</h2>
+            <div class="info-box">
+                <p>ผู้ใช้บริการทั่วไปสามารถเข้าถึงและใช้งานฟังก์ชันหลักของแอปพลิเคชันได้ในรูปแบบไม่ระบุตัวตน (Anonymous) โดยไม่ต้องผ่านกระบวนการลงทะเบียนหรือส่งมอบข้อมูลส่วนบุคคลระบุตัวตน</p>
+            </div>
+            <ul>
+                <li>ระบบจะสร้างรหัสระบุเซสชันแบบสุ่ม (Anonymous Session ID) ประจำอุปกรณ์ โดยผู้ใช้บริการสามารถกำหนดชื่อแสดงผลและรูปแทนตัว (Avatar) ได้อย่างอิสระ</li>
+                <li>การใช้งานในรูปแบบไม่ระบุตัวตน ไม่ถือเป็นการยกเว้นความรับผิดชอบในการปฏิบัติตามกฎระเบียบชุมชนและกฎหมายที่เกี่ยวข้อง</li>
+            </ul>
+
+            <h2><span class="section-icon">4</span> มาตรฐานการใช้งานและข้อห้าม (Code of Conduct & Prohibited Content)</h2>
+            <p>เพื่อให้การใช้งานพื้นที่สาธารณะเป็นไปอย่างสร้างสรรค์และปลอดภัย ผู้ใช้บริการตกลงว่าจะไม่เผยแพร่ ส่งต่อ หรือมีส่วนร่วมในเนื้อหาที่มีลักษณะดังต่อไปนี้:</p>
+
+            <div class="alert-box">
+                <h3>ข้อห้ามเกี่ยวกับเนื้อหาที่ไม่เหมาะสม (Objectionable Content Policy)</h3>
+                <p>ระบบมีนโยบายระงับเนื้อหาที่ไม่เหมาะสมอย่างเด็ดขาดตามมาตรฐานความปลอดภัยสากล</p>
+            </div>
+
+            <ul>
+                <li><strong>เนื้อหาที่ขัดต่อกฎหมายและความสงบเรียบร้อย:</strong> เนื้อหาที่มีลักษณะลามก อนาจาร การพนัน สารเสพติด สิ่งผิดกฎหมาย หรือการกระทำความผิดทางอาญา</li>
+                <li><strong>การคุกคามและการละเมิดสิทธิผู้อื่น:</strong> การข่มขู่ ดูหมิ่น กลั่นแกล้ง การเปิดเผยข้อมูลส่วนบุคคลของบุคคลภายนอกโดยไม่ได้รับอนุญาต (Doxxing) หรือการละเมิดสิทธิในทรัพย์สินทางปัญญา</li>
+                <li><strong>การสร้างความเกลียดชังและการเลือกปฏิบัติ:</strong> ข้อความที่มุ่งสร้างความแตกแยก เหยียดเชื้อชาติ ศาสนา เพศ หรือสภาพร่างกาย</li>
+                <li><strong>ข้อมูลเท็จและการรบกวนระบบ:</strong> การส่งข้อความขยะ (Spam), การเผยแพร่ลิงก์ที่ไม่ปลอดภัย, หรือการจงใจส่งข้อมูลสถานะความหนาแน่นอันเป็นเท็จ</li>
+            </ul>
+
+            <h2><span class="section-icon">5</span> กลไกการรายงานและการจัดการเนื้อหา (Content Reporting & Moderation)</h2>
+            <p>เพื่อให้สอดคล้องกับระเบียบว่าด้วยความปลอดภัยของ <strong>Apple App Store (Guideline 1.2)</strong> และ <strong>Google Play Store</strong> ระบบได้จัดให้มีกลไกการกำกับดูแลดังนี้:</p>
+            <ul>
+                <li><strong>ระบบรายงานเนื้อหา (Report Mechanism):</strong> ผู้ใช้บริการสามารถกดรายงานข้อความ รูปภาพ หรือพฤติกรรมที่ไม่เหมาะสมได้โดยตรงผ่านเมนูรายงานในแต่ละข้อความ</li>
+                <li><strong>ระยะเวลาการตรวจสอบ (24-Hour SLA):</strong> ฝ่ายกำกับดูแลจะดำเนินการตรวจสอบข้อความที่ได้รับรายงานและระงับการแสดงผลเนื้อหาที่ไม่เหมาะสมภายในระยะเวลา 24 ชั่วโมง</li>
+                <li><strong>มาตรการบังคับใช้:</strong> ผู้ให้บริการมีสิทธิ์ในการลบข้อความ ระงับสิทธิ์การส่งข้อความชั่วคราว หรือระงับการเข้าถึงระบบของอุปกรณ์ที่ละเมิดข้อกำหนดโดยมิต้องแจ้งให้ทราบล่วงหน้า</li>
+            </ul>
+
+            <h2><span class="section-icon">6</span> ทรัพย์สินทางปัญญา (Intellectual Property)</h2>
+            <ul>
+                <li><strong>สิทธิของผู้ให้บริการ:</strong> โครงสร้างโปรแกรม ซอร์สโค้ด งานออกแบบส่วนติดต่อผู้ใช้ (UI/UX) เครื่องหมายการค้า และตราสัญลักษณ์ “Know Here” เป็นทรัพย์สินทางปัญญาของผู้ให้บริการแต่เพียงผู้เดียว</li>
+                <li><strong>สิทธิในเนื้อหาของผู้ใช้บริการ:</strong> ผู้ใช้บริการยังคงเป็นเจ้าของสิทธิ์ในเนื้อหาที่ตนสร้างขึ้น ทั้งนี้ ผู้ใช้บริการตกลงให้สิทธิ์แบบไม่ผูกขาด (Non-exclusive License) แก่ผู้ให้บริการในการจัดเก็บ ประมวลผล และแสดงผลเนื้อหาดังกล่าวบนแอปพลิเคชันเพื่อการให้บริการ</li>
+            </ul>
+
+            <h2><span class="section-icon">7</span> ข้อปฏิเสธการรับประกัน (Disclaimer of Warranties)</h2>
+            <div class="info-box">
+                <p>การให้บริการแอปพลิเคชัน ข้อมูลสถานที่ ตลอดจนระดับความหนาแน่นของผู้ใช้บริการ เป็นการให้บริการตามสภาพ (“AS IS” และ “AS AVAILABLE”) ซึ่งข้อมูลส่วนหนึ่งรวบรวมจากแหล่งข้อมูลสาธารณะและการมีส่วนร่วมของชุมชน ผู้ให้บริการไม่รับประกันความสมบูรณ์ ความถูกต้องแม่นยำ หรือความต่อเนื่องของการให้บริการในทุกกรณี ผู้ใช้บริการควรตรวจสอบความถูกต้องกับสถานที่โดยตรงก่อนดำเนินการใดๆ</p>
+            </div>
+
+            <h2><span class="section-icon">8</span> การจำกัดความรับผิด (Limitation of Liability)</h2>
+            <p>ในขอบเขตสูงสุดที่กฎหมายอนุญาต ผู้ให้บริการจะไม่รับผิดชอบต่อความเสียหายใดๆ ทั้งทางตรง ทางอ้อม ค่าเสียหายเชิงลงโทษ หรือความเสียหายที่เป็นผลสืบเนื่อง ซึ่งเกิดขึ้นจากการเข้าใช้บริการ การไม่สามารถเข้าใช้บริการ หรือการเชื่อถือข้อมูลที่ปรากฏบนแอปพลิเคชันนี้</p>
+
+            <h2><span class="section-icon">9</span> กฎหมายที่ใช้บังคับและเขตอำนาจศาล (Governing Law)</h2>
+            <p>ข้อกำหนดและเงื่อนไขการให้บริการฉบับนี้ อยู่ภายใต้การบังคับใช้และการตีความตามกฎหมายแห่งราชอาณาจักรไทย ข้อพิพาทใดๆ ที่เกิดขึ้นอันเกี่ยวเนื่องกับข้อกำหนดนี้ ให้อยู่ในเขตอำนาจการพิจารณาของศาลไทย</p>
+
+            <h2><span class="section-icon">10</span> ช่องทางการติดต่อ (Contact Information)</h2>
+            <p>หากมีข้อสอบถามเกี่ยวกับข้อกำหนดและเงื่อนไขการให้บริการ หรือประสงค์จะรายงานปัญหาการใช้งาน สามารถติดต่อได้ที่:</p>
+            
+            <div class="contact-card">
+                <div class="contact-item"><strong>ผู้ให้บริการ / ฝ่ายพัฒนา:</strong> PKSoft Development Team</div>
+                <div class="contact-item"><strong>อีเมลติดต่อ:</strong> support@pksoft.dev</div>
+                <div class="contact-item"><strong>แอปพลิเคชัน:</strong> Know Here Mobile</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="nav-links">
+            <a href="privacy_policy.html">นโยบายความเป็นส่วนตัว (Privacy Policy)</a>
+            •
+            <a href="terms_of_service.html">เงื่อนไขการใช้บริการ (Terms of Service)</a>
+        </div>
+        <p>© 2026 PKSoft. All rights reserved. Know Here Mobile Application.</p>
+    </footer>
+
+</body>
+</html>
