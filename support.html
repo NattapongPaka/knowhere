@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ศูนย์ช่วยเหลือและติดต่อฝ่ายสนับสนุน (Support) — Know Here</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0066B3;
+            --primary-dark: #004D88;
+            --primary-light: #EBF4FC;
+            --primary-border: #BFDBFE;
+            --success: #10B981;
+            --success-light: #ECFDF5;
+            --text-main: #1E293B;
+            --text-muted: #475569;
+            --text-subtle: #64748B;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border-color: #E2E8F0;
+            --radius-card: 20px;
+            --radius-input: 12px;
+            --shadow-md: 0 8px 30px rgba(0, 102, 179, 0.08);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            background: #004D88;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .top-nav a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            color: #FFFFFF;
+        }
+
+        .top-nav .nav-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0066B3 0%, #004D88 100%);
+            color: white;
+            padding: 48px 24px 44px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 102, 179, 0.15);
+        }
+
+        .header-container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 13.5px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        p.subtitle {
+            font-size: 15.5px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 620px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 780px;
+            width: 100%;
+            margin: -24px auto 60px;
+            padding: 0 20px;
+        }
+
+        .support-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Quick Info Badges */
+        .info-ribbon {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin-bottom: 32px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ribbon-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--primary-light);
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid var(--primary-border);
+        }
+
+        .ribbon-icon {
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .ribbon-text h4 {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 2px;
+        }
+
+        .ribbon-text p {
+            font-size: 12px;
+            color: var(--text-subtle);
+            line-height: 1.3;
+        }
+
+        /* Form Styles */
+        .form-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .form-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        label .required {
+            color: #EF4444;
+            margin-left: 2px;
+        }
+
+        label .optional {
+            color: var(--text-subtle);
+            font-size: 12px;
+            font-weight: 400;
+            margin-left: 4px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            font-family: inherit;
+            font-size: 14.5px;
+            padding: 12px 16px;
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-input);
+            background-color: #FAFCFE;
+            color: var(--text-main);
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--primary);
+            background-color: #FFFFFF;
+            box-shadow: 0 0 0 4px rgba(0, 102, 179, 0.12);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 130px;
+            line-height: 1.6;
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        .input-hint {
+            font-size: 12.5px;
+            color: var(--text-subtle);
+            margin-top: 6px;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 28px;
+            border: none;
+            border-radius: var(--radius-input);
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0, 102, 179, 0.28);
+            transition: all 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0, 102, 179, 0.38);
+            background: linear-gradient(135deg, #0074CC 0%, #005699 100%);
+        }
+
+        .btn-submit:active {
+            transform: translateY(1px);
+        }
+
+        .btn-submit.loading {
+            opacity: 0.85;
+            cursor: not-allowed;
+        }
+
+        .spinner {
+            display: none;
+            width: 18px;
+            height: 18px;
+            border: 2.5px solid rgba(255, 255, 255, 0.35);
+            border-radius: 50%;
+            border-top-color: #FFFFFF;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .btn-submit.loading .spinner {
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Success Modal Dialog */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            max-width: 480px;
+            width: 100%;
+            padding: 36px 30px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transform: scale(0.92) translateY(10px);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1) translateY(0);
+        }
+
+        .success-icon-wrap {
+            width: 72px;
+            height: 72px;
+            background: var(--success-light);
+            border: 2px solid #A7F3D0;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            color: var(--success);
+            margin-bottom: 20px;
+            animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 10px;
+        }
+
+        .modal-message {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 26px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn-modal-close {
+            background: var(--primary);
+            color: white;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            width: 100%;
+        }
+
+        .btn-modal-close:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-muted);
+            font-size: 13.5px;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-card);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .support-card {
+                padding: 26px 20px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            header {
+                padding: 38px 16px 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <a href="index.html">← กลับหน้าศูนย์ข้อมูล (Legal Portal)</a>
+        <div class="nav-links">
+            <a href="privacy_policy.html">นโยบายความเป็นส่วนตัว</a>
+            <a href="terms_of_service.html">เงื่อนไขการใช้บริการ</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="app-badge">🎧 Know Here Support Center</div>
+            <h1>ศูนย์ช่วยเหลือและติดต่อฝ่ายสนับสนุน</h1>
+            <p class="subtitle">แจ้งปัญหาการใช้งาน สอบถามข้อมูล หรือส่งข้อเสนอแนะเพื่อร่วมกันพัฒนาแอปพลิเคชัน Know Here</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="support-card">
+            <!-- Ribbon Highlights -->
+            <div class="info-ribbon">
+                <div class="ribbon-item">
+                    <div class="ribbon-icon">⚡</div>
+                    <div class="ribbon-text">
+                        <h4>ดูแลรวดเร็ว</h4>
+                        <p>ตอบกลับภายใน 24–48 ชม.</p>
+                    </div>
+                </div>
+                <div class="ribbon-item">
+                    <div class="ribbon-icon">🔒</div>
+                    <div class="ribbon-text">
+                        <h4>ปลอดภัย เป็นส่วนตัว</h4>
+                        <p>ไม่เปิดเผยข้อมูลส่วนบุคคล</p>
+                    </div>
+                </div>
+                <div class="ribbon-item">
+                    <div class="ribbon-icon">📱</div>
+                    <div class="ribbon-text">
+                        <h4>พร้อมดูแลทุกระบบ</h4>
+                        <p>รองรับทั้ง iOS และ Android</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="form-title">แบบฟอร์มติดต่อฝ่ายสนับสนุน</h2>
+            <p class="form-desc">กรุณากรอกข้อมูลและรายละเอียดปัญหาด้านล่าง เพื่อให้ทีมงานสามารถช่วยเหลือได้อย่างตรงจุด</p>
+
+            <!-- Support Form -->
+            <form id="supportForm" onsubmit="return handleSupportSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="userName">ชื่อ / นามแฝง <span class="required">*</span></label>
+                        <input type="text" id="userName" name="userName" placeholder="เช่น คุณสมชาย หรือ นามแฝงในแอป" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">อีเมลสำหรับติดต่อกลับ <span class="required">*</span></label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="name@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="topicCategory">หมวดหมู่ปัญหา / เรื่องที่ต้องการติดต่อ <span class="required">*</span></label>
+                        <select id="topicCategory" name="topicCategory" required>
+                            <option value="" disabled selected>-- เลือกหมวดหมู่ปัญหา --</option>
+                            <option value="bug">🐛 รายงานปัญหาการใช้งาน / ข้อผิดพลาดของแอป (Bug)</option>
+                            <option value="map_gps">📍 ปัญหาเกี่ยวกับพิกัด ตำแหน่ง หรือแผนที่</option>
+                            <option value="chat_community">💬 ปัญหาการสนทนาในห้องแชท หรือเนื้อหาไม่เหมาะสม</option>
+                            <option value="feature_request">💡 ข้อเสนอแนะ / แนะนำฟังก์ชันใหม่</option>
+                            <option value="business_place">🏪 สอบถามเกี่ยวกับการลงทะเบียนร้านค้า / พาร์ทเนอร์</option>
+                            <option value="general">❓ สอบถามข้อมูลทั่วไป / อื่นๆ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="deviceInfo">อุปกรณ์และระบบปฏิบัติการ <span class="optional">(ถ้ามี)</span></label>
+                        <select id="deviceInfo" name="deviceInfo">
+                            <option value="not_specified">ไม่ระบุ</option>
+                            <option value="iphone">iPhone (iOS)</option>
+                            <option value="ipad">iPad (iPadOS)</option>
+                            <option value="android_phone">Android Phone</option>
+                            <option value="android_tablet">Android Tablet</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="issueSubject">หัวข้อเรื่อง <span class="required">*</span></label>
+                    <input type="text" id="issueSubject" name="issueSubject" placeholder="สรุปสั้นๆ เช่น ไม่สามารถเปิดห้องแชทได้" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="issueMessage">รายละเอียดข้อความ / คำอธิบาย <span class="required">*</span></label>
+                    <textarea id="issueMessage" name="issueMessage" placeholder="กรุณาระบุรายละเอียดเพิ่มเติม เช่น ขั้นตอนที่เกิดปัญหา หรือสถานที่ที่พบปัญหา..." required></textarea>
+                    <div class="input-hint">💡 หากเป็นปัญหาเฉพาะสถานที่ สามารถระบุชื่อสถานที่หรือย่านเพื่อให้ทีมงานตรวจสอบได้เร็วขึ้น</div>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn-submit">
+                    <span class="spinner"></span>
+                    <span class="btn-text">ส่งข้อมูลติดต่อ</span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Success Modal Dialog -->
+    <div id="successModal" class="modal-overlay" onclick="handleOverlayClick(event)">
+        <div class="modal-card">
+            <div class="success-icon-wrap">✓</div>
+            <h3 class="modal-title">ส่งข้อมูลสำเร็จเรียบร้อย!</h3>
+            <p class="modal-message">
+                ขอบคุณสำหรับการติดต่อฝ่ายสนับสนุน <strong>Know Here</strong><br>
+                ทีมงานได้รับเรื่องของคุณเรียบร้อยแล้ว และจะทำการตรวจสอบพร้อมติดต่อกลับทางอีเมลที่ระบุไว้โดยเร็วที่สุด
+            </p>
+            <div class="modal-actions">
+                <button type="button" class="btn-modal-close" onclick="closeSuccessModal()">ตกลง</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">หน้าหลัก</a>
+            <a href="privacy_policy.html">นโยบายความเป็นส่วนตัว</a>
+            <a href="terms_of_service.html">เงื่อนไขการใช้บริการ</a>
+            <a href="support.html">ติดต่อเรา</a>
+        </div>
+        <p>© 2026 PKSoft. All rights reserved. Know Here Mobile Application.</p>
+    </footer>
+
+    <script>
+        function handleSupportSubmit(event) {
+            // ป้องกันการเปลี่ยนหน้า / ป้องกันการ reload หน้า
+            event.preventDefault();
+
+            const form = document.getElementById('supportForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+
+            // แสดงสถานะจำลองการประมวลผลสั้นๆ (Micro-interaction)
+            submitBtn.classList.add('loading');
+            btnText.textContent = 'กำลังส่งข้อมูล...';
+
+            setTimeout(() => {
+                // คืนค่าปุ่มกลับสู่ปกติ
+                submitBtn.classList.remove('loading');
+                btnText.textContent = 'ส่งข้อมูลติดต่อ';
+
+                // ล้างข้อมูลในฟอร์มทั้งหมด (Clear Form)
+                form.reset();
+
+                // แสดง Dialog Success โดยยังคงอยู่หน้าเดิม
+                showSuccessModal();
+            }, 500);
+
+            return false;
+        }
+
+        function showSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function handleOverlayClick(event) {
+            if (event.target.id === 'successModal') {
+                closeSuccessModal();
+            }
+        }
+    </script>
+</body>
+</html>
