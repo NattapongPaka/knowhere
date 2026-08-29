@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>นโยบายความเป็นส่วนตัว (Privacy Policy) — Know Here</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0066B3;
+            --primary-dark: #004d88;
+            --primary-light: #EBF4FC;
+            --text-main: #1E293B;
+            --text-muted: #475569;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border-color: #E2E8F0;
+            --info-border: #CBD5E1;
+            --radius-card: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.75;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0066B3 0%, #004D88 100%);
+            color: white;
+            padding: 48px 24px 36px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 102, 179, 0.12);
+        }
+
+        .header-content {
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        .badge-app {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 5px 14px;
+            border-radius: 999px;
+            font-size: 13.5px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .effective-date {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        main {
+            max-width: 860px;
+            margin: -24px auto 60px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        .intro {
+            font-size: 15.5px;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: justify;
+        }
+
+        .notice-box {
+            background-color: var(--primary-light);
+            border: 1px solid #BFDBFE;
+            border-radius: 12px;
+            padding: 20px 22px;
+            margin-bottom: 30px;
+        }
+
+        .notice-box h3 {
+            color: #004D88;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .notice-box p {
+            color: #1E3A5F;
+            font-size: 14.5px;
+            margin-bottom: 0;
+            line-height: 1.65;
+        }
+
+        h2 {
+            font-size: 19px;
+            font-weight: 600;
+            color: #0F172A;
+            margin: 32px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 8px;
+            font-size: 14.5px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: var(--text-main);
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 18px;
+            color: var(--text-main);
+            font-size: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .data-table th, .data-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px 16px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .data-table th {
+            background-color: #F1F5F9;
+            color: #0F172A;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .contact-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 8px;
+            font-size: 14.5px;
+            color: #334155;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-muted);
+            font-size: 13.5px;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-card);
+        }
+
+        .nav-links {
+            margin-bottom: 10px;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 36px 16px 28px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .card {
+                padding: 24px 18px;
+            }
+            h2 {
+                font-size: 17.5px;
+            }
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="badge-app">แอปพลิเคชัน Know Here</div>
+            <h1>นโยบายความเป็นส่วนตัว (Privacy Policy)</h1>
+            <div class="effective-date">มีผลบังคับใช้ตั้งแต่วันที่ 25 สิงหาคม 2026 เป็นต้นไป</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="intro">
+                เอกสารนโยบายความเป็นส่วนตัวฉบับนี้ จัดทำขึ้นโดยผู้ให้บริการแอปพลิเคชัน <strong>Know Here</strong> เพื่อชี้แจงแนวปฏิบัติ ขอบเขตการประมวลผลข้อมูล และมาตรการคุ้มครองสิทธิความเป็นส่วนตัวของผู้ใช้บริการ ให้สอดคล้องตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA) รวมถึงระเบียบและข้อกำหนดว่าด้วยการคุ้มครองข้อมูลผู้ใช้ของ <strong>Apple App Store</strong> และ <strong>Google Play Store</strong>
+            </div>
+
+            <div class="notice-box">
+                <h3>การให้บริการในรูปแบบไม่ระบุตัวตน (Anonymous Service Architecture)</h3>
+                <p>แอปพลิเคชัน Know Here ได้รับการพัฒนาภายใต้หลักการ <strong>Privacy by Design</strong> โดยให้บริการสำรวจสถานที่และสื่อสารในชุมชนในรูปแบบที่ไม่จำเป็นต้องระบุตัวตน (Anonymous Access) ผู้ใช้บริการทั่วไปสามารถเข้าถึงและใช้งานฟังก์ชันหลักของแอปพลิเคชันได้ทันทีโดยไม่ต้องลงทะเบียนหรือให้ข้อมูลส่วนบุคคลที่สามารถระบุตัวตนได้โดยตรง</p>
+            </div>
+
+            <h2><span class="section-icon">1</span> ขอบเขตข้อมูลที่มีการประมวลผล (Categories of Data Processed)</h2>
+            <p>เพื่อประโยชน์ในการให้บริการตามฟังก์ชันการทำงานของระบบ แอปพลิเคชันจะประมวลผลข้อมูลทางเทคนิคและข้อมูลการใช้งานเท่าที่จำเป็น ดังต่อไปนี้:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">ประเภทข้อมูล</th>
+                        <th style="width: 40%;">รายละเอียดข้อมูล</th>
+                        <th style="width: 35%;">วัตถุประสงค์และความจำเป็น</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ข้อมูลตำแหน่งที่ตั้ง<br>(Geolocation Data)</strong></td>
+                        <td>พิกัดภูมิศาสตร์ (Latitude และ Longitude) ที่ได้รับจากอุปกรณ์ของผู้ใช้บริการเฉพาะขณะเปิดใช้งานแอปพลิเคชัน (While in Use)</td>
+                        <td>ใช้สำหรับการแสดงหมุดตำแหน่งบนแผนที่ การค้นหาสถานที่ใกล้เคียง การคำนวณระยะทาง และการระบุพื้นที่สำหรับการรายงานสถานะความหนาแน่น</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ข้อมูลระบุตัวตนชั่วคราว<br>(Pseudonymous Profile)</strong></td>
+                        <td>รหัสระบุเซสชันแบบสุ่ม (Anonymous Session Identifier), ชื่อที่ผู้ใช้กำหนดขึ้นเอง (Display Name) และรหัสตัวละครจำลอง (Avatar Identifier)</td>
+                        <td>ใช้สำหรับแสดงสถานะการเข้าร่วมสนทนาในห้องแชทของสถานที่ เพื่อให้สามารถสื่อสารได้โดยไม่เชื่อมโยงกับอัตลักษณ์จริงของผู้ใช้บริการ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ข้อมูลเนื้อหาที่สร้างขึ้น<br>(User-Generated Content)</strong></td>
+                        <td>ข้อความสนทนา รูปภาพที่ผู้ใช้เลือกส่งในห้องแชท และข้อมูลการรายงานระดับความหนาแน่นของสถานที่</td>
+                        <td>ใช้สำหรับการนำเสนอข้อมูลและแลกเปลี่ยนสารสนเทศภายในชุมชนของผู้ใช้บริการตามวัตถุประสงค์ของแต่ละห้องสนทนา</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ข้อมูลทางเทคนิคและการใช้งาน<br>(Technical & Diagnostic Data)</strong></td>
+                        <td>รุ่นของอุปกรณ์ ระบบปฏิบัติการ ข้อมูลข้อผิดพลาดของระบบ (Crash Reports) และสถิติการใช้งานระบบโดยสรุป</td>
+                        <td>ใช้สำหรับการวิเคราะห์เสถียรภาพ การแก้ไขข้อผิดพลาดทางเทคนิค และการปรับปรุงประสิทธิภาพของระบบ</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2><span class="section-icon">2</span> ข้อมูลที่ไม่มีการจัดเก็บ (Non-Collected Information)</h2>
+            <p>ผู้ให้บริการไม่มีนโยบายจัดเก็บหรือร้องขอข้อมูลส่วนบุคคลที่มีลักษณะระบุตัวตนโดยตรง (Personally Identifiable Information - PII) จากผู้ใช้บริการทั่วไป ซึ่งรวมถึงแต่ไม่จำกัดเพียง:</p>
+            <ul>
+                <li>ชื่อ-นามสกุลจริง วันเดือนปีเกิด หรือหมายเลขบัตรประจำตัวประชาชน</li>
+                <li>หมายเลขโทรศัพท์ หรือข้อมูลสมุดรายชื่อผู้ติดต่อ (Contact Lists)</li>
+                <li>ที่อยู่อีเมล หรือรหัสผ่านส่วนบุคคลสำหรับการใช้งานทั่วไป</li>
+                <li>ข้อมูลทางการเงิน หมายเลขบัญชีธนาคาร หรือข้อมูลบัตรเครดิต/เดบิต</li>
+                <li>ข้อมูลการติดตามตำแหน่งอย่างต่อเนื่องในพื้นหลัง (Background Location Tracking)</li>
+            </ul>
+
+            <h2><span class="section-icon">3</span> วัตถุประสงค์ในการประมวลผลข้อมูล</h2>
+            <p>การประมวลผลข้อมูลจะดำเนินการตามขอบเขตและวัตถุประสงค์ที่ระบุไว้เท่านั้น ได้แก่:</p>
+            <ul>
+                <li>การให้บริการค้นหา แสดงผลข้อมูลสถานที่ และเส้นทางผ่านระบบแผนที่</li>
+                <li>การอำนวยความสะดวกในการติดต่อสื่อสารและแลกเปลี่ยนข้อมูลสดในพื้นที่ระหว่างผู้ใช้บริการ</li>
+                <li>การประมวลผลและแสดงระดับความหนาแน่นของผู้ใช้บริการในแต่ละสถานที่ตามเวลาจริง</li>
+                <li>การตรวจสอบความปลอดภัย การป้องกันสแปม และการจัดการเนื้อหาที่ไม่เหมาะสมตามมาตรฐานชุมชน</li>
+            </ul>
+
+            <h2><span class="section-icon">4</span> การเปิดเผยและการส่งต่อข้อมูลแก่ผู้ประมวลผลข้อมูลภายนอก</h2>
+            <p>ผู้ให้บริการไม่มีการจำหน่าย แลกเปลี่ยน หรือเปิดเผยข้อมูลการใช้งานเพื่อประโยชน์ทางการตลาดเชิงพาณิชย์ ทั้งนี้ การประมวลผลข้อมูลบางส่วนอาจดำเนินการผ่านผู้ให้บริการโครงสร้างพื้นฐานที่มีมาตรฐานความปลอดภัยระดับสากล ได้แก่:</p>
+            <ul>
+                <li><strong>ผู้ให้บริการระบบคลาวด์และฐานข้อมูล (Cloud & Database Infrastructure):</strong> ใช้สำหรับการจัดเก็บและรับส่งข้อมูลข้อความสนทนาแบบเรียลไทม์ ภายใต้การเข้ารหัสความปลอดภัยมาตรฐาน HTTPS/TLS</li>
+                <li><strong>ผู้ให้บริการแผนที่และสารสนเทศทางภูมิศาสตร์ (Map & Tile Services):</strong> ใช้สำหรับการแสดงผลแผนที่และประมวลผลพิกัดสถานที่</li>
+            </ul>
+
+            <h2><span class="section-icon">5</span> มาตรการรักษาความมั่นคงปลอดภัยของข้อมูล</h2>
+            <p>ผู้ให้บริการได้กำหนดมาตรการรักษาความปลอดภัยทางเทคนิคและการบริหารจัดการที่เหมาะสม เพื่อคุ้มครองข้อมูลจากการเข้าถึง การเปลี่ยนแปลง หรือการเปิดเผยโดยมิชอบ โดยใช้มาตรการควบคุมสิทธิ์การเข้าถึงข้อมูล (Access Control) และการเข้ารหัสข้อมูลขณะส่งผ่านเครือข่ายอินเทอร์เน็ต</p>
+
+            <h2><span class="section-icon">6</span> สิทธิและการควบคุมข้อมูลของผู้ใช้บริการ</h2>
+            <p>ผู้ใช้บริการสามารถควบคุมและจัดการข้อมูลของตนได้ตามช่องทางดังต่อไปนี้:</p>
+            <ul>
+                <li><strong>การควบคุมสิทธิ์การเข้าถึงตำแหน่ง:</strong> ผู้ใช้บริการสามารถเปิดหรือปิดสิทธิ์การเข้าถึงพิกัดตำแหน่ง (Location Permission) ได้ตลอดเวลาผ่านเมนูการตั้งค่าของอุปกรณ์</li>
+                <li><strong>การแก้ไขข้อมูลโปรไฟล์จำลอง:</strong> ผู้ใช้บริการสามารถปรับเปลี่ยนชื่อที่แสดงและรูปแทนตัว (Avatar) ได้ตามความต้องการผ่านหน้าตั้งค่าโปรไฟล์</li>
+                <li><strong>การล้างข้อมูลเซสชัน:</strong> ผู้ใช้บริการสามารถล้างข้อมูลเซสชันหรือลบแอปพลิเคชันเพื่อยุติการเชื่อมโยงข้อมูลในอุปกรณ์ได้ทันที หรือสามารถติดต่อผู้ให้บริการเพื่อขอลบเนื้อหาที่เคยเผยแพร่ในระบบได้</li>
+            </ul>
+
+            <h2><span class="section-icon">7</span> ข้อมูลของผู้เยาว์ (Minors' Privacy)</h2>
+            <p>เนื่องจากระบบไม่มีการจัดเก็บข้อมูลส่วนบุคคลระบุตัวตน จึงไม่มีการประมวลผลข้อมูลส่วนบุคคลของผู้เยาว์ ทั้งนี้ ผู้ใช้บริการที่เป็นผู้เยาว์ควรได้รับคำแนะนำจากผู้ปกครองในการเข้าร่วมสนทนาในพื้นที่สาธารณะ</p>
+
+            <h2><span class="section-icon">8</span> การปรับปรุงและแก้ไขนโยบายความเป็นส่วนตัว</h2>
+            <p>ผู้ให้บริการอาจดำเนินการทบทวนและปรับปรุงนโยบายความเป็นส่วนตัวนี้เป็นครั้งคราว เพื่อให้สอดคล้องกับการพัฒนาการของระบบหรือการเปลี่ยนแปลงทางกฎหมาย โดยจะระบุวันที่มีผลบังคับใช้ล่าสุดไว้ที่ส่วนบนของเอกสารฉบับนี้</p>
+
+            <h2><span class="section-icon">9</span> ช่องทางการติดต่อ (Contact Information)</h2>
+            <p>หากมีข้อสงสัย ข้อเสนอแนะ หรือประสงค์จะสอบถามข้อมูลเพิ่มเติมเกี่ยวกับนโยบายความเป็นส่วนตัว สามารถติดต่อได้ตามช่องทางดังต่อไปนี้:</p>
+            
+            <div class="contact-card">
+                <div class="contact-item"><strong>ผู้ให้บริการ / ฝ่ายพัฒนา:</strong> PKSoft Development Team</div>
+                <div class="contact-item"><strong>อีเมลติดต่อ:</strong> support@pksoft.dev</div>
+                <div class="contact-item"><strong>แอปพลิเคชัน:</strong> Know Here Mobile</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="nav-links">
+            <a href="privacy_policy.html">นโยบายความเป็นส่วนตัว (Privacy Policy)</a>
+            •
+            <a href="terms_of_service.html">เงื่อนไขการใช้บริการ (Terms of Service)</a>
+        </div>
+        <p>© 2026 PKSoft. All rights reserved. Know Here Mobile Application.</p>
+    </footer>
+
+</body>
+</html>
